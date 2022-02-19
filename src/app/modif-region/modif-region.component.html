@@ -1,0 +1,40 @@
+<app-menu></app-menu>
+<div class="container-fluid">
+        <div class="row no-gutter">
+           
+            <div class="col-md-3 d-none d-md-flex bg-image"></div>
+           
+            <div class="col-md-8 bg-none">
+                <div class="login d-flex align-items-center py-5">
+    
+              
+                    <div [hidden]="submitted" class="container">
+                        <div class="row">
+                           <h1>Modification Region </h1>
+                                <form (ngSubmit)="onSubmit()">
+                                        <div class="form-group" style="margin-top: 5%">
+                                            <select [(ngModel)]="Region.province" name="idProvince" class = "form-control">
+                                                <option *ngFor="let province  of  Province" [ngValue]="province">{{province.nomProvince}}</option>
+                                            </select>
+                                            The selected province is : {{Region.province | json}}
+                                          </div><br>
+                                          <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="nomRegion" required [(ngModel)]="Region.nomRegion" name="nomRegion">
+                                          </div>
+                                          <br>
+                                          <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Mot de Passe" required [(ngModel)]="Region.mdp" name="mdp">
+                                          </div><br>
+                                        <button type="submit" class="btn btn-primary">Modifier</button>
+                                </form>
+                            </div>
+                        
+                    </div><!-- End -->
+    
+                </div>
+            </div><!-- End -->
+            <div class="col-md-1 d-none d-md-flex bg-image"></div>
+        </div>
+    </div>
+    
+    

@@ -1,0 +1,14 @@
+#formAjout{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+button{
+    width: 60%;
+    margin-left:20%
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}

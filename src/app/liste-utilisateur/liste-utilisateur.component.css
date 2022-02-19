@@ -1,0 +1,49 @@
+.main--container{
+    width: 100%;
+    display: grid;
+     grid-template-columns: repeat(auto-fit,300px); 
+    place-content:center;
+    gap: 1rem;
+    margin-left: 120px;
+}
+.card{
+    height: auto;
+    border-radius: 20px;
+    background-color: #ffff;
+    margin-top: 30px;
+    width: 250px;
+    
+
+}
+
+img{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    justify-content: center;
+}
+article{
+    padding: 1em;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+button{
+    margin-top: 6%;
+    width: 70%;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }

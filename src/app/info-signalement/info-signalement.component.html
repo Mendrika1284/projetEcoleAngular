@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<app-map></app-map>
+<ngb-carousel id="carousel">
+    <ng-template *ngFor="let photo of Photo"  ngbSlide>
+        <div class="img-block">
+          <img src="../assets/images/{{photo.nomPhoto}}" width="500" height="250">
+        </div>
+      </ng-template>
+</ngb-carousel>
+
+<div id="affectation">
+<h1>Affecter Signalement</h1>
+<div id="formAjout">
+<div [hidden]="submitted" style="width: 400px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <select [(ngModel)]="SignalementAffecter.signalement" name="idsignalement">
+                <option *ngFor="let signalement of Signalement" [ngValue]="signalement">{{signalement.idsignalement}}</option>
+            </select>
+        <select [(ngModel)]="SignalementAffecter.region" name="idregion" aria-placeholder="Nom Région" class = "form-control">
+            <option *ngFor="let region  of  Region" [ngValue]="region">{{region.nomRegion}}</option>
+        </select>
+        </div><br>
+        <button type="submit" class="btn btn-primary">Affecter</button>
+      </form>
+</div>
+</div>

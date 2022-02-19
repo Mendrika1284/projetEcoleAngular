@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row no-gutter">
+       
+        <div class="col-md-6 d-none d-md-flex bg-image"></div>
+       
+        <div class="col-md-6 bg-light">
+            <div class="login d-flex align-items-center py-5">
+
+          
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h4 class="display-4">Login Admin<img src="../assets/images/avatar.png" width="40px"></h4>
+                           <p class="text-muted mb-4">veuillez-remplir les cases</p>
+
+                           
+                            <form >
+                                <div class="form-group mb-3">
+                                    <input id="inputEmail" type="text"   placeholder="Login" required [(ngModel)]="admin.login" name="login" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input id="inputPassword" type="password"  placeholder="Mot de Passe" required [(ngModel)]="admin.mdp" name="mdp" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    
+                                </div>
+                               
+                                <button type="submit" routerLink="/accueil" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">login</button>
+                                
+                            </form>
+                            <h5>{{message}}</h5>
+                        </div>
+                        
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>
+

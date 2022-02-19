@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+<h1>Ajouter Région</h1>
+<div id="formAjout">
+<div [hidden]="submitted" style="width: 400px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+        <select [(ngModel)]="Region.province" name="idProvince" aria-placeholder="Nom Région" class = "form-control">
+            <option *ngFor="let province  of  Province" [ngValue]="province">{{province.nomProvince}}</option>
+        </select>
+         <br>
+         <div class="form-group">
+          <input type="text" class="form-control" placeholder="nomRegion" required [(ngModel)]="Region.nomRegion" name="nomRegion">
+        </div>
+        </div><br>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Mot de Passe" required [(ngModel)]="Region.mdp" name="mdp">
+        </div><br>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+      </form>
+</div>

@@ -1,0 +1,24 @@
+<app-menu></app-menu>
+<div class="rxx">
+       <div class="card" *ngFor="let signalementNonAffecter of SignalementNonAffecter" routerLink="/infosignalement/{{signalementNonAffecter.idsignalement}}">
+        <div class="card-body">
+          <span class="tag tag-teal">{{signalementNonAffecter.dateSignalement}}</span>
+         <h4> <button ><i class="fas fa-bars"></i></button> {{signalementNonAffecter.typeSignalement['nomTypeSignalement']}} </h4> 
+          <p>
+            {{signalementNonAffecter.description}}
+          </p>
+          <div class="user">
+            <img src="../assets/images/{{signalementNonAffecter.utilisateur['photoUtilisateur']}}" alt="" />
+            <div class="user-info">
+              <span class="vg vg-teal">{{signalementNonAffecter.utilisateur['nom']}} {{signalementNonAffecter.utilisateur['prenom']}}</span>
+            </div>
+          </div>
+        </div>
+          </div> 
+          </div>
+<!--             <div class="pa">
+            <pagination-controls (pageChange)="pageChange($event)" class="my-pagination"></pagination-controls>
+            </div> -->
+
+          
+    

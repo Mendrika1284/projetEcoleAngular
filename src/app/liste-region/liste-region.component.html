@@ -1,0 +1,28 @@
+<div style="position: fixed; height: 1000px;">
+<app-menu></app-menu>
+</div>
+<div class="content">
+  <body>
+ <table>
+    <thead>
+        <tr style=" background-color: #00BFFF;">
+        <th scope="col">Nom Region</th>
+        <th scope="col">Nom province</th>
+        <th scope="col">motdepasse</th>
+        <th scope="col">Modification</th>
+        <th scope="col">Suppression</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let region  of  Region">
+      <td data-label="Nom Region">{{region.nomRegion}}</td>
+      <td data-label="Nom province">{{region.province["nomProvince"]}}</td>
+      <td data-label="motdepasse">{{region.mdp}}</td>
+      <td data-label="Modifier"><button class="boutonmodifier" routerLink="/modifRegion/{{region.idRegion}}">MODIFIER</button></td>
+      <td data-label="Supprimer"><button class="bouton"  routerLink="/supregion/{{region.idRegion}}">SUPPRIMER</button></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+<!--  traitement suppression region crud -->
+</div>

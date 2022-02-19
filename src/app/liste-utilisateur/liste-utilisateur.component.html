@@ -1,0 +1,31 @@
+<app-menu></app-menu>
+<div class="wrapper">
+<h1>Listes des Utilisateurs</h1>
+<section class="main--container">
+    <div *ngFor="let utilisateurs of Utilisateur">
+        <article class="card" >
+            <img src="../assets/images/{{utilisateurs.photoUtilisateur}}" alt="card image" />
+        <article class="content">
+            
+            <h5>
+              {{utilisateurs.nom}} {{utilisateurs.prenom}}
+            </h5>
+            <br>
+            <p>
+               Email: {{utilisateurs.email}}
+             </p>
+             <p>
+               sexe: {{utilisateurs.email}}
+            </p>
+            <p>
+               Naissance: {{utilisateurs.datenaissance}}
+             </p>
+                <form>  
+                <a routerLink="/infosUtilisateur/{{utilisateurs.idUtilisateur}}"  class="btn btn-primary">show details</a> 
+            </form>  
+        </article>
+    </article>
+   </div>
+   <div>
+
+   
